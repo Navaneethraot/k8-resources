@@ -1,0 +1,8 @@
+kind: Configmaps
+apiVersion: V1
+metadata:
+  name: daws78
+data:
+  course: "Devops"
+  trainer: "sivakumar"
+  github:   "https://github.com/Navaneethraot/k8-resources.git"
