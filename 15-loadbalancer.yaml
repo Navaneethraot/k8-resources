@@ -1,9 +1,9 @@
 apiVersion: V1
 kind: service
 metadata:
-  name: nginx-np
+  name: nginx-lb
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:  
     name: frontend
     project: expense
