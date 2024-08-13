@@ -13,4 +13,4 @@ ports:
   - protocols: TCP  
     port: 80 #service-port
     targetport: 80 #target-port
-    nodePort: 32760
+    nodePort: 32761
