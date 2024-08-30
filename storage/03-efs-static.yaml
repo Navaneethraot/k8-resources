@@ -52,7 +52,7 @@ spec:
 apiVersion: V1
 kind: service
 metadata:
-  name: nginx-lb
+  name: efs-static
 spec:
   type: LoadBalancer
   selector:  
