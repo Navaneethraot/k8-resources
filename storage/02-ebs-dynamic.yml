@@ -1,0 +1,29 @@
+apiVersion: storage.k8s.io/v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-dynamic
+spec:
+  storageClassName:  "expense-ebs" # empty string must be explicitly set otherwise default storage will be set
+  accessModes:
+   - ReadWriteOnce
+  resources:
+    requests:
+      storage: 4Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-dynamic
+spec:
+  containers:
+  - name: nginix
+    image: nginix
+    volumeMounts:
+    - name: persistent-storage
+      mountPath: /usr/share/nginx/html
+  nodeSelector:
+    topology.kubernetes.io/zone: us-east-1c
+  volumes:
+  - name: persistent-storage
+    persistentVolumeClaim:
+      claimName: ebs-dynamic 
