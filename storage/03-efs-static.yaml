@@ -58,6 +58,6 @@ spec:
   selector:  
     purpose: efs-static
   ports:
-  - protocols: TCP  
+  - protocol: TCP  
     port: 80 #service-port
-    targetport: 80 #target-port
+    targetPort: 80 #target-port
