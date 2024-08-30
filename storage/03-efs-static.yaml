@@ -57,7 +57,7 @@ spec:
   type: LoadBalancer
   selector:  
     purpose: efs-static
-ports:
+  ports:
   - protocols: TCP  
     port: 80 #service-port
     targetport: 80 #target-port
